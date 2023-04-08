@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./script.js">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-6">
+                    <a href="" class="logo">Portfolio.</a>
+                </div>
+                <div class="col l-6">
+                    <nav class="navbar">
+                        <a href="#" style="--i:1" class="tab-item active">Home</a>
+                        <a href="#" style="--i:2" class="tab-item">Work Experience</a>
+                        <a href="#" style="--i:3" class="tab-item">Skills</a>
+                        <a href="#" style="--i:4" class="tab-item">Project</a>
+                        <a href="#" style="--i:5" class="tab-item">Education</a>
+                        <a href="#" style="--i:5" class="tab-item">Interested</a>
+                        <!-- <a href="#" style="--i:6" class="tab-item">Contact</a> -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="home tab-pane active">
+        <div class="grid wide">
+            <div class="row home-content">
+                <div class="col l-6 home-description">
+                    <div class="home-text">
+                        <h3>Hello, It's me</h3>
+                        <h1>Huy Nguyen</h1>
+                        <h3>And I'm a <span class="multiple-text"></span></h3>
+                        <p>Welcom to my Website, this website was inspired by
+                            <a href="https://www.youtube.com/@codehal" class="youtubeChannel">"Codehal"</a>
+                            YouTube channel. Click the buttons below to follow me on the social media or click
+                        the "download" button to download my CV</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/BaronNguyen111/" style="--i:7">
+                            <i class="bx bxl-fb fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/HuyNguy45273147" style="--i:8">
+                            <i class="bx bxl-tt fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/HuyNguyenCode" style="--i:9">
+                            <i class="bx bxl-li fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/baronnguyen111/" style="--i:10">
+                            <i class="bx bxl-li fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <button class="btn">
+                        <a href="./assets/img/download.png" download="nguyenquochuy_CEO">Download CV</a>
+                    </button>
+                </div>
+                <div class="col l-6">
+                    <div class="home-img">
+                        <img src="./assets/img/download.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-experience tab-pane">
+        <div class="grid wide">
+            <div class="row work-experience-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="skills tab-pane">
+        <div class="grid wide">
+            <div class="row about-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="project tab-pane">
+        <div class="grid wide">
+            <div class="row about-content">
+            </div>
+        </div>
+    </section>
+
+    <section class="interested tab-pane">
+        <div class="grid wide">
+            <div class="row about-content">
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".multiple-text", {
+        strings: ["Font-End Developer","HTML/CSS Website Designer", "Blogger",],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 100,
+        loop: true,
+    });
+
+
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+    const tabs = $$(".tab-item");
+    const panes = $$(".tab-pane");
+    const tabActive = $(".tab-item.active");
+
+    tabs.forEach(function(tab, index) {
+          tab.onclick = function() {
+            $(".tab-item.active").classList.remove("active");
+            $(".tab-pane.active").classList.remove("active");
+            this.classList.add("active")
+            panes[index].classList.add("active");
+          }
+        })
+    </script>
+</body>
+</html>

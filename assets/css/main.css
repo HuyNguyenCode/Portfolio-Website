@@ -127,7 +127,11 @@ body {
 }
 
 .home-img {
-    margin-left: 260px;
+    position: relative;
+    top: -170px;
+    margin-left: 50px;
+    /* margin-bottom: 1000px; */
+    background-color: transparent;
 }
 
 .social-media {

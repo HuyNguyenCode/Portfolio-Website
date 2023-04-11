@@ -34,7 +34,7 @@ body {
 .navbar {
     /* display: flex;
     flex-direction: row; */
-    padding-left: 10px;
+    padding-left: 100px;
 }
 
 .navbar > a{
@@ -43,7 +43,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: var(--white-color);
-    margin: 0 10px;
+    margin: 0 20px;
     transition: 0.3s; /*kiểm soát tốc độ hoạt ảnh khi thay đổi thuộc tính CSS. Thay vì thay đổi thuộc tính có 
     hiệu lực ngay lập tức, bạn có thể khiến các thay đổi trong thuộc tính diễn ra trong một khoảng thời gian.*/
     opacity: 0;
@@ -141,7 +141,6 @@ body {
 
 .social-media a{
     display: flex;
-    /* display: inline-block; */
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -168,30 +167,229 @@ body {
     border: 2px solid var(--primary-color);
     border-radius: 40px;
     margin-top: 20px;
-    background-color: var(--primary-color);
     width: fit-content;
     padding: 10px 30px;
-    box-shadow: 0 0 10px var(--primary-color);
     cursor: pointer;
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
-    margin-right: 30px;
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
 .btn a {
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    color:#1f242d;
     letter-spacing: 1px;
 }
 
+.btn-readmore,
+.btn-download {
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:#1f242d;
+    letter-spacing: 1px;
 
-.work-experience {
-    width: 100%;
-    height: calc(100% - var(--header-height));
-    margin-top: var(--header-height);
-    background-color: var(--pirmary-background-color);
-    display: none;
 }
+
+.btn-download a{
+    color:#1f242d;
+}
+
+.btn-readmore:hover
+.btn-download:hover {
+    /* box-shadow: 0 0 10px var(--primary-color); */
+}
+
+.btn-hireMe {
+    position: relative;
+    width: 180px;
+    height: 48px;
+    z-index: 1;
+    margin-left: 30px;
+}
+
+.btn-hireMe a{
+    color: var(--white-color);
+}
+
+.btn-hireMe::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, rgb(8, 62, 99), #3cf, rgb(6, 44, 75))    ;
+    z-index: -1;
+    border-radius: 40px;
+    border-width: 1px;
+}
+
+.btn-hireMe::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, rgb(8, 62, 99), #3cf, rgb(6, 44, 75))    ;
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    transition: .5s ease; /*Chuyển động */
+    border-width: 1px;
+}
+
+.btn-hireMe:hover::after{ 
+    background-position: 100% 0;
+}
+
+.services {
+    margin-bottom: auto;
+}
+.services-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+    transition: .5s ease;
+    
+}
+
+.services-heading  span {
+    color: var(--primary-color);
+}
+
+.services-content {
+    margin-bottom: 180px;
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: var(--white-color);
+    color: var(--pirmary-background-color);
+    width: auto;
+    margin-left: 5px;
+    border-top: 7px solid var(--primary-color);
+    border-bottom: 7px solid var(--primary-color);
+    cursor: default;
+    transition: .5s ease;
+}
+
+.services-card:hover {
+    box-shadow: 0 5px 1px 1px var(--white-color);
+    transform: scale(1.02);
+}
+
+.services-card:hover .services-card_heading {
+    color: var(--primary-color);
+}
+
+.services-card_icon {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.services-card_heading {
+    margin: 5px;
+    font-size: 25px;
+}
+
+.services-card_text {
+    margin: 10px 25px 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-readmore {
+    text-align: center;
+    margin-bottom: 50px;
+    /* background-color: var(--primary-color);
+    color: var(--pirmary-background-color); 
+    font-weight: 300;
+    font-size: 15px; */
+    color: var(--white-color);
+    box-shadow: 0 0 0 var(--primary-color);
+}
+
+.btn-readmore:hover{
+    background-color: transparent;
+    color:var(--pirmary-background-color)
+}
+
+
+
+.portfolio {
+
+}
+.portfolio-heading {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 40px;
+    transition: .5s ease;
+    
+}
+
+.portfolio-heading  span {
+    color: var(--primary-color);
+}
+
+.portfolio-content {
+
+}
+
+.portfolio-card {
+    background-image: url(../img/Portfolio_background_img.png);
+    /* background-color: white; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: var(--white-color);
+    color: var(--white-color);
+    width: auto;
+    margin-left: 10px;
+    margin-bottom: 35px;
+    cursor: default;
+    transition: .5s ease;
+}
+
+.portfolio-card:hover {
+
+}
+
+.portfolio-card_icon {
+    color: var(--primary-color);
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.portfolio-card_heading {
+    margin-top: 50px;
+    margin-bottom: 10px ;
+    font-size: 25px;
+}
+
+.portfolio-card_text {
+    margin: 10px 70px 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-portfolio {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: block;
+    width: 40px;    
+    height: 40px;  
+    border: none;  
+}   
+

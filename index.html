@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
-    <link rel="stylesheet" href="./script.js">
+    <link rel="stylesheet" href="./assets/js/script.js">
     <title>Huy Nguyen Portfolio</title>
 </head>
 <body>
@@ -29,10 +29,10 @@
                         <a href="#" style="--i:4" class="tab-item">Project</a>
                         <a href="#" style="--i:5" class="tab-item">Education</a>
                         <a href="#" style="--i:5" class="tab-item">Interested</a> -->
-                        <a href="#" style="--i:2" class="tab-item">Services</a>
-                        <a href="#" style="--i:3" class="tab-item">About</a>
-                        <a href="#" style="--i:4" class="tab-item">Project</a>
-                        <a href="#" style="--i:5" class="tab-item">Contact</a>
+                        <a href="#services" style="--i:2" class="tab-item js-btn-services">Services</a>
+                        <a href="#about" style="--i:3" class="tab-item">About</a>
+                        <a href="#portfolio" style="--i:4" class="tab-item">Project</a>
+                        <a href="#contact" style="--i:5" class="tab-item">Contact</a>
                         <!-- <a href="#" style="--i:6" class="tab-item">Contact</a> -->
                     </nav>
                 </div>
@@ -83,7 +83,7 @@
         </div>
     </section>
 
-    <section class="services grid wide">
+    <section class="services grid wide" id="services">
         <h1 class="services-heading">My 
             <span>Services</span>
             </h1>
@@ -134,106 +134,126 @@
         
     </section>
 
-    <!-- <section class="portfolio grid wide">
+    <section class="portfolio grid wide" id="portfolio">
         <h1 class="portfolio-heading">My 
-            <span>Project</span>
+            <span>Projects</span>
             </h1>
         <div class="row portfolio-content">
             <div class="col l-4">
                 <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Web Design
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
+                    <img src="./assets/img/Portfolio_background_img.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Management applicaiton
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are some samples of the work we've done for management software projects.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="col l-4">
                 <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Web Developement
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
+                    <img src="./assets/img/Portfolio_background_img_2.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Full-stack
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are a few full-stack web projects we've completed.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="col l-4">
                 <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Java Project
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
+                    <img src="./assets/img/Portfolio_background_img_3.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Design
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Several UX/UI projects we completed using HTML, CSS, and ReactJS.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row portfolio-content">
+            <div class="col l-4">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Management applicaiton
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are some samples of the work we've done for management software projects.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="col l-4">
                 <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Web3 Project
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
+                    <img src="./assets/img/Portfolio_background_img_5.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Full-stack
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are a few full-stack web projects we've completed.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="col l-4">
                 <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Back-end Project
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
+                    <img src="./assets/img/Portfolio_background_img_6.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Design
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Several UX/UI projects we completed using HTML, CSS, and ReactJS.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="col l-4">
-                <div class="portfolio-card">
-                    <h1 class="portfolio-card_heading">
-                        Front-end Project
-                    </h1>
-                    <p class="portfolio-card_text">
-                        We help you to create your own website with strongest tool like: HTML/CSS, JS, ReactJS, and so on
-                    </p>
-                    <button class="btn-portfolio">
-                        <div class="btn-icon-portfolio">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </div>
-                    </button>
-                </div>
-            </div>
-            
         </div>
         
-    </section> -->
+    </section>
 
+    
     <!-- <section class="work-experience tab-pane">
         <div class="grid wide">
             <div class="row work-experience-content">
@@ -267,6 +287,7 @@
 
 
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    
     <script>
         var typed = new Typed(".multiple-text", {
         strings: ["Font-End Developer","HTML/CSS Website Designer", "Coder",],
@@ -277,22 +298,33 @@
     });
 
 
-    // const $ = document.querySelector.bind(document);
-    // const $$ = document.querySelectorAll.bind(document);
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
 
-    // const tabs = $$(".tab-item");
+    const tabs = $$(".tab-item");
     // const panes = $$(".tab-pane");
-    // const tabActive = $(".tab-item.active");
+    const tabActive = $(".tab-item.active");
 
-    // tabs.forEach(function(tab, index) {
-    //       tab.onclick = function() {
-    //         $(".tab-item.active").classList.remove("active");
-    //         $(".tab-pane.active").classList.remove("active");
-    //         this.classList.add("active")
-    //         panes[index].classList.add("active");
-    //       }
-    //     })
+    tabs.forEach(function(tab, index) {
+          tab.onclick = function() {
+            $(".tab-item.active").classList.remove("active");
+            // $(".tab-pane.active").classList.remove("active");
+            this.classList.add("active")
+            panes[index].classList.add("active");
+          }
+
+        //   if()
+        })
+
+
+    const services = document.querySelector(".services");
+    const servicesBtn = $(".js-btn-services");
+    servicesBtn.onclick = () => {
+        services.scrollIntoView();
+        console.alert("Hi");
+    }
 
     </script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

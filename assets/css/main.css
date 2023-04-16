@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
 body {
     background: var(--pirmary-background-color);
     color: white;
@@ -19,7 +24,15 @@ body {
     padding-top : 20px;
     width: 100%;
     height: var(--header-height);
+    display: flex;
+    align-items: center;
     z-index: 100;
+    transition: .5s;
+}
+
+.header.sticky {
+    background-color: var(--pirmary-background-color);
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -63,16 +76,19 @@ body {
     display: block;
 }
 
-.home {
+.app_body {
     margin-top: var(--header-height);
-    /* position: relative; */
+}
+
+.home {
+    margin-top: calc( var(--header-height) * 1.5);
     width: 100%;
     height: calc(100% - var(--header-height));
     display: none;
 }
 
 .home-content {
-    padding: 70px 0;
+    padding: 35px 0;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -132,6 +148,7 @@ body {
     margin-left: 50px;
     /* margin-bottom: 1000px; */
     background-color: transparent;
+    margin-top: var(--header-height);
 }
 
 .social-media {
@@ -209,6 +226,7 @@ body {
     height: 48px;
     z-index: 1;
     margin-left: 30px;
+    border: none;
 }
 
 .btn-hireMe a{
@@ -246,14 +264,17 @@ body {
 }
 
 .services {
-    margin-bottom: auto;
+    margin-top: var(--header-height);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .services-heading {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     font-size: 40px;
     transition: .5s ease;
-    
 }
 
 .services-heading  span {
@@ -261,7 +282,7 @@ body {
 }
 
 .services-content {
-    margin-bottom: 180px;
+    margin-bottom: 135px;
 }
 
 .services-card {
@@ -293,6 +314,7 @@ body {
     color: var(--primary-color);
     font-size: 50px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .services-card_heading {
@@ -325,11 +347,17 @@ body {
 
 
 .portfolio {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  
 }
 .portfolio-heading {
     text-align: center;
-    margin: 30px 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
     font-size: 40px;
     transition: .5s ease;
     
@@ -344,26 +372,43 @@ body {
 }
 
 .portfolio-card {
-    background-image: url(../img/Portfolio_background_img.png);
-    /* background-color: white; */
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+    border-radius: 30px;
+    color: var(--white-color);
+    margin-left: 10px;
+    margin-bottom: 35px;
+    cursor: default;
+    width: 100%; /*Kế thừa width của col trong grid, grid giúp tự chia đều width của các element trong 1 row
+    thật ra không cần set vì nó sẽ tự động kế thừa width của thẻ chứa nó*/
+}
+
+.portfolio-card img {
+    width: 100%; /*Kế thừa width từ portfolio-card*/
+    height: 100%;
+    border-radius: 30px;
+    transition: .5s ease;
+}
+
+
+.portfolio-card_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(rgb(0, 0, 0, 0.1), var(--primary-color));
     border-radius: 30px;
-    background-color: var(--white-color);
-    color: var(--white-color);
-    width: auto;
-    margin-left: 10px;
-    margin-bottom: 35px;
-    cursor: default;
-    transition: .5s ease;
+    opacity: 0;
+    width: 100%;
 }
 
-.portfolio-card:hover {
-
+.portfolio-card:hover .portfolio-card_content{
+    opacity: 1;
+    transition: .5s ease;
 }
 
 .portfolio-card_icon {
@@ -375,6 +420,8 @@ body {
 .portfolio-card_heading {
     margin-top: 50px;
     margin-bottom: 10px ;
+    margin-left: 10px; 
+    margin-right: 10px; 
     font-size: 25px;
 }
 
@@ -391,5 +438,6 @@ body {
     width: 40px;    
     height: 40px;  
     border: none;  
+    cursor: pointer;
 }   
 

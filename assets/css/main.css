@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top:calc(var(--header-height) + 10px);
 }
 
 body {
@@ -199,8 +199,8 @@ body {
     font-weight: 600;
     letter-spacing: 1px;
 }
-
 .btn-readmore,
+.btn-sendmessage,
 .btn-download {
     background-color: var(--primary-color);
     text-decoration: none;
@@ -213,11 +213,6 @@ body {
 
 .btn-download a{
     color:#1f242d;
-}
-
-.btn-readmore:hover
-.btn-download:hover {
-    /* box-shadow: 0 0 10px var(--primary-color); */
 }
 
 .btn-hireMe {
@@ -328,6 +323,7 @@ body {
     font-size: 16px;
 }
 
+.btn-sendmessage,
 .btn-readmore {
     text-align: center;
     margin-bottom: 50px;
@@ -344,8 +340,6 @@ body {
     color:var(--pirmary-background-color)
 }
 
-
-
 .portfolio {
     display: flex;
     justify-content: center;
@@ -354,7 +348,9 @@ body {
     min-height: 100vh;
   
 }
-.portfolio-heading {
+.contact-heading,
+.portfolio-heading, 
+.testimonial-heading {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
@@ -363,12 +359,10 @@ body {
     
 }
 
+.contact-heading span,
+.testimonial-heading span,
 .portfolio-heading  span {
     color: var(--primary-color);
-}
-
-.portfolio-content {
-
 }
 
 .portfolio-card {
@@ -441,3 +435,145 @@ body {
     cursor: pointer;
 }   
 
+.testimonial-box {
+    /* background: yellowgreen; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 75%;
+    padding: 50px;
+    margin: auto;
+}
+
+.testimonial-heading {
+    text-align: center;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    height: 90%;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    border-bottom: 10px solid var(--primary-color);
+    border-top: 10px solid var(--primary-color);
+    padding: 30px 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 50px rgba(255, 253, 253, 0.3);
+    cursor: pointer;
+}
+
+.testimonial-card_img {
+    display: block;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    width: 15%;
+    margin-top: 10px;
+}
+
+.testimonial-card_heading {
+    text-align: center;
+    color: var(--pirmary-background-color);
+    margin: 20px 0;
+}
+
+.testimonial-card_text {
+    color: var(--pirmary-background-color);
+    font-size: 15px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primary-color);
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;   
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255, 253, 253, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color)
+}
+
+.contact-wrapper {
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 150px;
+    /* background-color: ; */
+}
+
+.contact-box {
+    width: 60%;
+    margin-bottom: 5px;
+}
+
+.message-input,
+.contact-input {
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 2px rgba(255, 253, 253, 0.2);
+    font-size: 15px;
+}
+
+.btn-sendmessage {
+    border-radius: 5px;
+    margin-top: 50px;
+    /* background-color: var(--primary-color);  */
+} 
+
+.footer {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+
+}
+.footer-text {
+   color: var(--pirmary-background-color);
+   font-weight: 500;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-self: center;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    outline: 3px solid transparent;
+    border: none;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.footer-iconTop a i{ 
+    color: var(--pirmary-background-color)
+}
+
+.footer-iconTop a:hover{
+    outline-color: var(--white-color) ;
+}

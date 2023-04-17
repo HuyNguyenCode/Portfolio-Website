@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./assets/js/script.js">
+  <!-- Demo styles -->
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+        max-width: 100%;
+    }
+
+    .testimonial {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 5rem 1rem;
+        overflow: hidden;
+    }
+
+    .testimonial-wrapper {
+        position: relative;
+        max-width: 1300px;
+        width: 100%;
+        padding: 50px;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+
+    .testimonial-silde {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--white-color);
+        border-radius: 20px;
+        box-shadow: 0 10px 50px rgba(255, 253, 253, 0.3);
+        padding: 30px 50px 40px;
+        border-top: 10px solid var(--primary-color);
+        border-bottom: 10px solid var(--primary-color);
+    }
+
+    .testimonial-silde_img {
+        display: block;
+        object-fit: cover;
+        border: 5px solid var(--primary-color);
+        width: 300px;
+        margin-top: 10px;
+        border-radius: 50%;
+    }
+
+    .testimonial-silde_heading {
+        text-align: center;
+        color: var(--pirmary-background-color);
+        margin: 20px 0;
+    }
+
+    .testimonial-silde_text {
+        color: var(--pirmary-background-color);
+        font-size: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+    <section class="testimonial grid" id="testimonial">
+        <h1 class="testimonial-heading">Valueable 
+            <span>Testimonial</span>
+        </h1>
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-silde swiper-slide">
+                        <img class="testimonial-silde_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-silde_heading">Jackson Levi</h1>
+                        <p class="testimonial-silde_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                    <div class="testimonial-silde swiper-slide">
+                        <img class="testimonial-silde_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-silde_heading">Flora Ocean</h1>
+                        <p class="testimonial-silde_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                    <div class="testimonial-silde swiper-slide">
+                        <img class="testimonial-silde_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-silde_heading">Julian Grayson</h1>
+                        <p class="testimonial-silde_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+        },
+
+    });
+  </script>
+</body>
+
+</html>

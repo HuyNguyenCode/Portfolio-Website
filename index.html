@@ -7,9 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/js/script.js">
     <title>Huy Nguyen Portfolio</title>
@@ -29,7 +32,7 @@
                         <a href="#" style="--i:4" class="tab-item">Project</a>
                         <a href="#" style="--i:5" class="tab-item">Education</a>
                         <a href="#" style="--i:5" class="tab-item">Interested</a> -->
-                        <a href="#services" style="--i:2" class="tab-item js-btn-services">Services</a>
+                        <a href="#services" style="--i:2" class="tab-item">Services</a>
                         <a href="#about" style="--i:3" class="tab-item">About</a>
                         <a href="#portfolio" style="--i:4" class="tab-item">Project</a>
                         <a href="#contact" style="--i:5" class="tab-item">Contact</a>
@@ -67,12 +70,14 @@
                             <i class="bx bxl-li fa-brands fa-linkedin"></i>
                         </a>
                     </div>
+                    
                     <button class="btn btn-download">
                         <a href="./assets/img/download.png" download="nguyenquochuy_CEO">Download CV</a>
                     </button>
                     <button class="btn btn-hireMe">
                         <a href="./assets/img/download.png">Hire me</a>
                     </button>
+                    
                 </div>
                 <div class="col l-6">
                     <div class="home-img">
@@ -88,7 +93,7 @@
             <span>Services</span>
             </h1>
         <div class="row services-content">
-            <div class="col l-4">
+            <div class="col l-4 m-6 c-12">
                 <div class="services-card">
                     <div class="services-card_icon">
                         <i class="fa-solid fa-code"></i>
@@ -102,7 +107,7 @@
                     <button class="btn btn-readmore">Read more</button>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 m-6 c-12">
                 <div class="services-card">
                     <div class="services-card_icon">
                         <i class="fa-solid fa-code"></i>
@@ -116,7 +121,7 @@
                     <button class="btn btn-readmore">Read more</button>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 m-12 c-12">
                 <div class="services-card">
                     <div class="services-card_icon">
                         <i class="fa-solid fa-code"></i>
@@ -137,14 +142,14 @@
     <section class="portfolio grid wide" id="portfolio">
         <h1 class="portfolio-heading">My 
             <span>Projects</span>
-            </h1>
-        <div class="row portfolio-content">
-            <div class="col l-4">
+        </h1>
+        <div class="hide-on-tablet row">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
                         <h1 class="portfolio-card_heading">
-                            Management applicaiton
+                            Applicaiton
                         </h1>
                         <p class="portfolio-card_text">
                             Here are some samples of the work we've done for management software projects.
@@ -157,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_2.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
@@ -175,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_3.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
@@ -194,8 +199,8 @@
                 </div>
             </div>
         </div>
-        <div class="row portfolio-content">
-            <div class="col l-4">
+        <div class="hide-on-tablet row">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
@@ -213,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_5.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
@@ -231,7 +236,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col l-4">
+            <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_6.png" alt="" class="porfolio-card_background">
                     <div class="portfolio-card_content">                        
@@ -250,81 +255,291 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Applicaiton
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are some samples of the work we've done for management software projects.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_5.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Full-stack
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are a few full-stack web projects we've completed.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_6.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Design
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Several UX/UI projects we completed using HTML, CSS, and ReactJS.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Applicaiton
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are some samples of the work we've done for management software projects.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+           
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_2.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Full-stack
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Here are a few full-stack web projects we've completed.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col m-6">
+                <div class="portfolio-card">
+                    <img src="./assets/img/Portfolio_background_img_3.png" alt="" class="porfolio-card_background">
+                    <div class="portfolio-card_content">                        
+                        <h1 class="portfolio-card_heading">
+                            Web Design
+                        </h1>
+                        <p class="portfolio-card_text">
+                            Several UX/UI projects we completed using HTML, CSS, and ReactJS.
+                        </p>
+                        <button class="btn-portfolio">
+                            <div class="btn-icon-portfolio">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
         
     </section>
 
-    
-    <!-- <section class="work-experience tab-pane">
-        <div class="grid wide">
-            <div class="row work-experience-content">
+    <section class="testimonial grid wide" id="testimonial">
+        <h1 class="testimonial-heading">Valueable 
+            <span>Testimonial</span>
+        </h1>
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial-card swiper-slide">
+                        <img class="testimonial-card_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-card_heading">Jackson Levi</h1>
+                        <p class="testimonial-card_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <img class="testimonial-card_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-card_heading">Flora Ocean</h1>
+                        <p class="testimonial-card_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <img class="testimonial-card_img" src="./assets/img/testimonail_img1.png" alt="">
+                        <h1 class="testimonial-card_heading">Julian Grayson</h1>
+                        <p class="testimonial-card_text">
+                            Donec faucibus sapien nisi, vitae suscipit ligula lobortis vitae. Cras urna neque, 
+                            vulputate id tortor vitae, dictum faucibus ex. Integer aliquam elit enim, eu aliquam 
+                            odio bibendum a. Nullam aliquam risus metus, id semper arcu tincidunt ac. Mauris velit
+                            ipsum, feugiat eget lectus vel, egestas feugiat lectus. Cras sagittis faucibus eleifend. 
+                            Sed finibus convallis est, et blandit lacus sollicitudin eget. Curabitur congue in nisl ut congue. 
+                            Etiam eu risus mauris.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <section class="skills tab-pane">
-        <div class="grid wide">
-            <div class="row about-content">
+    <section class="contact grid wide" id="contact">
+        <div class="contact-heading">
+            Contact <span>Me!</span>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-box row">
+                <div class="contact-mobile col l-6 m-12 c-12">
+                    <input class="contact-input" type="text" placeholder="Full Name">
+                </div>
+                <div class="contact-mobile col l-6 m-12 c-12">
+                    <input class="contact-input" type="text" placeholder="Email Address">
+                </div>
             </div>
+            <div class="contact-box row">
+                <div class="contact-mobile col l-6 m-12 c-12">
+                    <input class="contact-input" type="text" placeholder="Mobile Number">
+                </div>
+                <div class="contact-mobile col l-6 m-12 c-12">
+                    <input class="contact-input" type="text" placeholder="Email Subject">
+                </div>
+            </div>
+            <div class="contact-box row">
+                <div class="contact-mobile col l-12 m-12 c-12">
+                    <textarea class="message-input" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-sendmessage">Send Message</button>
+            
         </div>
     </section>
 
-    <section class="project tab-pane">
-        <div class="grid wide">
-            <div class="row about-content">
-            </div>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; inspired by Codehal | All Rights Reserved</p>
         </div>
-    </section>
-
-    <section class="interested tab-pane">
-        <div class="grid wide">
-            <div class="row about-content">
-            </div>
+        <div class="footer-iconTop">                            
+            <a href="#">
+                <i class="fa-sharp fa-solid fa-arrow-up"></i>
+            </a>
         </div>
-    </section> -->
-
-
-
-
-
+    </footer>
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
-        var typed = new Typed(".multiple-text", {
-        strings: ["Font-End Developer","HTML/CSS Website Designer", "Coder",],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 100,
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
         loop: true,
-    });
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+        window.onscroll = () => {
+            let header = document.querySelector(".header");
+            header.classList.toggle('sticky', window.scrollY > 100);
+        }
+
+        var typed = new Typed(".multiple-text", {
+            strings: ["Front-End Developer","HTML/CSS Website Designer", "Coder",],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 100,
+            loop: true,
+        });
 
 
-    const $ = document.querySelector.bind(document);
-    const $$ = document.querySelectorAll.bind(document);
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
 
-    const tabs = $$(".tab-item");
-    // const panes = $$(".tab-pane");
-    const tabActive = $(".tab-item.active");
+        const tabs = $$(".tab-item");
+        const tabActive = $(".tab-item.active");
 
-    tabs.forEach(function(tab, index) {
-          tab.onclick = function() {
-            $(".tab-item.active").classList.remove("active");
-            // $(".tab-pane.active").classList.remove("active");
-            this.classList.add("active")
-            panes[index].classList.add("active");
-          }
-
-        //   if()
-        })
+        tabs.forEach(function(tab, index) {
+            tab.onclick = function() {
+                $(".tab-item.active").classList.remove("active");
+                this.classList.add("active")
+                panes[index].classList.add("active");
+            }
+            })
 
 
-    const services = document.querySelector(".services");
-    const servicesBtn = $(".js-btn-services");
-    servicesBtn.onclick = () => {
-        services.scrollIntoView();
-        console.alert("Hi");
-    }
+        const services = document.querySelector(".services");
+        const servicesBtn = $(".js-btn-services");
+        servicesBtn.onclick = () => {
+            services.scrollIntoView();
+            console.alert("Hi");
+        }
 
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 50,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     </script>
-    <script src="./assets/js/script.js"></script>
+
+
 </body>
 </html>

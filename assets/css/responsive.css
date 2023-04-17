@@ -1,0 +1,196 @@
+/*============================================= Grid ============================================*/
+
+/* Mobile */
+@media (max-width: 739px) {
+    html, body {
+        /* width: 100%; */
+        overflow-x: hidden;
+        margin: 0 5px;
+    }
+
+    .btn-hireMe {
+        display: none;
+    }
+
+    .portfolio-card {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .portfolio-mobile {
+        margin: 0;
+    }
+
+    .testimonial-card {        
+        padding: 35px;
+        overflow: hidden; /*Ẩn chữ dài quá 2 dòng*/
+        display: -webkit-box; /*Chỉ chạy trên các browser có core là webkit*/ 
+        -webkit-box-orient: vertical; /*Hướng của các dòng chữ, nếu từ trên xuống dưới thì là vertical*/
+        -webkit-line-clamp: 6; /*Giúp giới hạn phần content của một khối theo số dòng được set và xuất hiện dấu 3
+        chấm tại dòng đó*/
+        padding-bottom: 50px;
+    }
+
+    .testimonial-heading {
+        text-align: center;
+    }
+
+    .testimonial-card_img {
+        width: 100%;
+    }
+
+    .footer {
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px)  {
+    .header {
+        display: none;
+    }
+
+    .home-description {
+        text-align: center;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .social-media {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-media a {
+        margin: 0 10px;
+    }
+
+    .services-card {
+        margin-bottom: 20px;
+        height: 90%;
+    }
+    
+    .services-card_text {
+        margin: 10px 25px 30px 25px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .contact-wrapper,
+    .contact-box  {
+        width: 100%;
+        /* margin-bottom: 10px; */
+    }
+
+    .contact-mobile { 
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .services-card {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .services-card_heading {
+        margin: 5px;
+        font-size: 35px;
+    }
+    
+    .services-card_text {
+        margin: 10px 25px 30px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .services-card_icon {
+        color: var(--primary-color);
+        font-size: 70px;
+        margin-top: 20px;
+        width: 100%;
+    }    
+
+    .btn-sendmessage,
+    .btn-readmore {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    .portfolio-card_icon {
+        color: var(--primary-color);
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .portfolio-card_heading {
+        margin-top: 50px;
+        margin-bottom: 10px ;
+        margin-left: 10px; 
+        margin-right: 10px; 
+        font-size: 35px;
+    }
+
+    .btn-portfolio {
+        border-radius: 50%;
+        margin-bottom: 20px;
+        display: block;
+        width: 50px;    
+        height: 50px;  
+        border: none;  
+        cursor: pointer;
+    }
+
+    .portfolio-card_text {
+        display: none;
+    }
+
+    .testimonial-wrapper {
+        max-width: 100%;
+    }
+    
+
+    .testimonial-card_img {
+        width: 25%;
+    }
+    
+    .testimonial-card_heading {
+        font-size: 30px;
+    }
+    
+    .testimonial-card_text {
+        font-size: 20px;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+
+    .contact-tablet {
+        margin-bottom: 30px;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    
+}
+
+/* Độ phân giải tại 1039px thì phần navbar phía trên bị "sụp" xuống thì ẩn nó đi */
+@media (max-width: 1039px) {
+    :root {
+        --header-height: 68px;
+        --search-part-height: 68px;
+    }
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+}

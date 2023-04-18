@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top:calc(var(--header-height) + 10px);
+    scroll-padding-top:calc(var(--header-height) + 15px);
 }
 
 body {

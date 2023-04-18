@@ -53,7 +53,7 @@
 
     <section class="home tab-pane active">
         <div class="grid wide">
-            <div class="row home-content">
+            <div class="row home-content home-wrapper">
                 <div class="col l-6 home-description">
                     <div class="home-text">
                         <h3>Hello, It's me</h3>
@@ -151,7 +151,7 @@
         <h1 class="portfolio-heading">My 
             <span>Projects</span>
         </h1>
-        <div class="hide-on-tablet row">
+        <div class="portfolio-content hide-on-tablet row">
             <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img.png" alt="" class="porfolio-card_background">
@@ -207,7 +207,7 @@
                 </div>
             </div>
         </div>
-        <div class="hide-on-tablet row">
+        <div class="portfolio-content hide-on-tablet row">
             <div class="col l-4 c-12">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
@@ -264,7 +264,7 @@
             </div>
         </div>
 
-        <div class="hide-on-pc row">
+        <div class="portfolio-content hide-on-pc row">
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
@@ -304,7 +304,7 @@
             
         </div>
 
-        <div class="hide-on-pc row">
+        <div class="portfolio-content hide-on-pc row">
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_6.png" alt="" class="porfolio-card_background">
@@ -343,7 +343,7 @@
             </div>
         </div>
 
-        <div class="hide-on-pc row">    
+        <div class="portfolio-content hide-on-pc row">    
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_2.png" alt="" class="porfolio-card_background">
@@ -481,6 +481,7 @@
 
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
       var swiper = new Swiper(".mySwiper", {
@@ -537,29 +538,19 @@
                 navbarMobileTablet.classList.add("hide-navbar");
                 navbarMobileTablet.classList.remove("show-navbar");
             }
-            })
+        })
 
-
-        const services = document.querySelector(".services");
-        const servicesBtn = $(".js-btn-services");
-        servicesBtn.onclick = () => {
-            services.scrollIntoView();
-            console.alert("Hi");
-        }
-
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 50,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        ScrollReveal({ 
+            reset: true,
+            distance: '80px',
+            duration: 2000,
+            delay: 200
         });
+        ScrollReveal().reveal('.home-c, .services-heading, .portfolio-heading, .testimonial-heading, .contact-heading', { origin: 'top' });
+        ScrollReveal().reveal('.home-img img, .home-wrapper, .services-content, .portfolio-content, .testimonial-wrapper, .contact-wrapper', { origin: 'bottom' });
+        ScrollReveal().reveal('h3, p', { origin: 'right' });
+        ScrollReveal().reveal('h1,', { origin: 'left' });
+
     </script>
 
 

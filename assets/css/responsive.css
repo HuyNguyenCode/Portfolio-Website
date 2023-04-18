@@ -253,11 +253,11 @@
     }
 }
 
-/* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .hide-on-pc {
         display: none;
     }
-} */
+}
 
 @media (min-width: 1113px) and (max-width: 1024px) { 
     .services-card {

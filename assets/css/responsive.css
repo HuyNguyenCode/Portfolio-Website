@@ -90,6 +90,70 @@
     .contact-mobile { 
         margin-bottom: 10px;
     }
+
+    .header-mobile-tablet {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background-color: var(--pirmary-background-color);
+        /* background-color: var(--white-color); */
+        top: 0;
+        z-index: 100;
+    }
+
+    .header-mobile-tablet.sticky{
+        box-shadow: 0 10px 50px rgba(255, 253, 253, 0.3);
+    }
+
+    .navbar-mobile-tablet {
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        padding: 20px;
+    }
+
+    .navbar-mobile-tablet > a{
+        margin: 20px 0;
+        display:inline-block;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 600;
+        color: var(--white-color);
+    }
+    
+    .navbar-mobile-tablet > a:hover{
+        color: var(--primary-color);
+    }
+    
+    .logo-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 30px;
+        color: var(--primary-color);
+        /* margin: 0 auto; */
+    }
+
+    .menu-icon {
+        color: var(--primary-color);
+        font-size: 30px;
+        /* margin: 0 auto; */
+    }
+
+    .hide-navbar.navbar-mobile-tablet {
+        display: none;
+    }
+
+    .show-navbar.navbar-mobile-tablet {
+        display: flex;
+    }
 }
 
 /* Tablet */
@@ -175,11 +239,6 @@
     .contact-tablet {
         margin-bottom: 30px;
     }
-
-    .hide-on-tablet {
-        display: none;
-    }
-
     
 }
 
@@ -192,5 +251,32 @@
     .hide-on-mobile-tablet {
         display: none;
     }
+}
 
+/* @media (min-width: 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+} */
+
+@media (min-width: 1113px) and (max-width: 1024px) { 
+    .services-card {
+        margin-bottom: 20px;
+        height: 90%;
+    }
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .navbar {
+        /* display: flex;
+        flex-direction: row; */
+        padding-left: 2px;
+    } 
+
+    .portfolio-card {
+        width: 80%;
+        margin: 20px auto;
+    }
 }

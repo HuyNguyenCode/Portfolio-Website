@@ -27,20 +27,28 @@
                 <div class="col l-6">
                     <nav class="navbar">
                         <a href="#" style="--i:1" class="tab-item active">Home</a>
-                        <!-- <a href="#" style="--i:2" class="tab-item">Work Experience</a>
-                        <a href="#" style="--i:3" class="tab-item">Skills</a>
-                        <a href="#" style="--i:4" class="tab-item">Project</a>
-                        <a href="#" style="--i:5" class="tab-item">Education</a>
-                        <a href="#" style="--i:5" class="tab-item">Interested</a> -->
                         <a href="#services" style="--i:2" class="tab-item">Services</a>
                         <a href="#about" style="--i:3" class="tab-item">About</a>
                         <a href="#portfolio" style="--i:4" class="tab-item">Project</a>
                         <a href="#contact" style="--i:5" class="tab-item">Contact</a>
-                        <!-- <a href="#" style="--i:6" class="tab-item">Contact</a> -->
                     </nav>
                 </div>
             </div>
         </div>
+    </header>
+
+    <header class="header-mobile-tablet">
+        <div class="logo-area">
+            <a href="" class="logo">Portfolio.</a>
+            <i class="menu-icon fa-solid fa-bars"></i>
+        </div>
+        <nav class="hide-navbar navbar-mobile-tablet">
+            <a href="#" class="tab-item active">Home</a>
+            <a href="#services" class="tab-item">Services</a>
+            <a href="#about" class="tab-item">About</a>
+            <a href="#portfolio" class="tab-item">Project</a>
+            <a href="#contact" class="tab-item">Contact</a>
+        </nav>
     </header>
 
     <section class="home tab-pane active">
@@ -57,7 +65,7 @@
                         the "download" button to download my CV</p>
                     </div>
                     <div class="social-media">
-                        <a href="https://www.facebook.com/BaronNguyen111/" style="--i:7">
+                        <a href="#" style="--i:7">
                             <i class="bx bxl-fb fa-brands fa-square-facebook"></i>
                         </a>
                         <a href="https://twitter.com/HuyNguy45273147" style="--i:8">
@@ -256,7 +264,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="hide-on-pc row">
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_4.png" alt="" class="porfolio-card_background">
@@ -296,7 +304,7 @@
             
         </div>
 
-        <div class="row">
+        <div class="hide-on-pc row">
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_6.png" alt="" class="porfolio-card_background">
@@ -335,8 +343,7 @@
             </div>
         </div>
 
-        <div class="row">
-           
+        <div class="hide-on-pc row">    
             <div class="col m-6">
                 <div class="portfolio-card">
                     <img src="./assets/img/Portfolio_background_img_2.png" alt="" class="porfolio-card_background">
@@ -471,6 +478,7 @@
             </a>
         </div>
     </footer>
+
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -488,9 +496,22 @@
           prevEl: ".swiper-button-prev",
         },
       });
+      
+        const navbarMobileTablet = document.querySelector(".navbar-mobile-tablet");
+        const navbarIcon = document.querySelector(".menu-icon");
+        navbarIcon.onclick = () => {
+            if (navbarMobileTablet.classList.contains("show-navbar")) {
+                navbarMobileTablet.classList.remove("show-navbar")
+                navbarMobileTablet.classList.add("hide-navbar")
+
+            } else {
+                navbarMobileTablet.classList.add("show-navbar");
+            }
+        }
 
         window.onscroll = () => {
             let header = document.querySelector(".header");
+            navbarMobileTablet.classList.toggle('sticky',window.scrollY > 100);
             header.classList.toggle('sticky', window.scrollY > 100);
         }
 
@@ -513,7 +534,8 @@
             tab.onclick = function() {
                 $(".tab-item.active").classList.remove("active");
                 this.classList.add("active")
-                panes[index].classList.add("active");
+                navbarMobileTablet.classList.add("hide-navbar");
+                navbarMobileTablet.classList.remove("show-navbar");
             }
             })
 

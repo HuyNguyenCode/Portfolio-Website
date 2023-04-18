@@ -35,6 +35,10 @@ body {
     box-shadow: 0 10px 10px rgb(0, 0, 0, 0.1);
 }
 
+.header-mobile-tablet {
+    display: none;
+}
+
 .logo {
     text-decoration: none;
     color: var(--white-color);
@@ -145,7 +149,7 @@ body {
 .home-img {
     position: relative;
     top: -170px;
-    margin-left: 50px;
+    margin-left: 120px;
     /* margin-bottom: 1000px; */
     background-color: transparent;
     margin-top: var(--header-height);
@@ -338,6 +342,10 @@ body {
 .btn-readmore:hover{
     background-color: transparent;
     color:var(--pirmary-background-color)
+}
+
+.hide-on-pc {
+    display: none;
 }
 
 .portfolio {

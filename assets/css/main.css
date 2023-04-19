@@ -48,19 +48,13 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
-.navbar {
-    /* display: flex;
-    flex-direction: row; */
-    padding-left: 100px;
-}
-
 .navbar > a{
     display:inline-block;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
     color: var(--white-color);
-    margin: 0 20px;
+    margin: 0 18px;
     transition: 0.3s; /*kiểm soát tốc độ hoạt ảnh khi thay đổi thuộc tính CSS. Thay vì thay đổi thuộc tính có 
     hiệu lực ngay lập tức, bạn có thể khiến các thay đổi trong thuộc tính diễn ra trong một khoảng thời gian.*/
     opacity: 0;
@@ -331,10 +325,6 @@ body {
 .btn-readmore {
     text-align: center;
     margin-bottom: 50px;
-    /* background-color: var(--primary-color);
-    color: var(--pirmary-background-color); 
-    font-weight: 300;
-    font-size: 15px; */
     color: var(--white-color);
     box-shadow: 0 0 0 var(--primary-color);
 }
@@ -348,6 +338,213 @@ body {
     display: none;
 }
 
+
+.education-box::before,
+.experience-box::before {
+    content:"";
+    position: absolute;
+    top: 65px;
+    border-left: 3px solid var(--primary-color);
+    height: 81%;
+}
+
+.education-card::after,
+.experience-card::after {
+    content:"";
+    position: absolute;
+    top: -9px;
+    left: -40px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    height: 20px;
+    width: 20px;
+}
+
+.education-card::before,
+.experience-card::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    border-radius:10px ;
+    transition: .5s;
+}
+.education-card:hover::before,
+.experience-card:hover::before {
+    width: 100%;
+    background-color: rgba(255, 253, 253, 0.1);
+}
+
+.skills-box_heading,
+.experience-box_heading,
+.education-box_heading {
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+.education-box,
+.experience-box {
+    position: relative;
+}
+
+.education-card,
+.experience-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 24%;
+    width: 90%;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.education-year,
+.experience-year {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;   
+}
+
+.education-year h3,
+.experience-year h3 {
+    margin-left: 10px;
+    font-size: 12px;
+    color: var(--primary-color);
+
+} 
+
+.education-year i,
+.experience-year i {
+    font-size: 12px;
+    color: var(--primary-color);
+} 
+
+.education-card_heading,
+.experience-card_heading {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.education-card_text,
+.experience-card_text {
+    margin: 5px 0;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-weight: 100;
+}
+
+
+.skills-wrapper {
+    margin-bottom: 110px;
+}
+
+.skills-coding,
+.skills-professional{
+    position: relative;
+}
+
+
+.skills-box_heading {
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.skills-card {
+    padding: 20px;
+}
+
+.skills-professional::before,
+.skills-coding::before {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius:10px ;
+    transition: .5s;
+}
+
+.skills-professional:hover::before,
+.skills-coding:hover::before {
+    width: 100%;
+    background-color: rgba(255, 253, 253, 0.05);
+}
+
+.skills-card_percent,
+.skills-card_name{
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.skills-card_progress {
+    height:24px;
+    width:0;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+}
+
+ .skills-card-html {
+    width: 80% ;
+}
+
+.skills-card-90 {
+    width: 90%;
+}
+
+.skills-card-80 {
+    width: 80%;
+}
+
+.skills-card-65 {
+    width: 65%;
+}
+
+.skills-card-75 {
+    width: 75%;
+}
+
+.skills-card-95 {
+    width: 95%;
+}
+
+.skills-card-67 {
+    width: 67%;
+}
+
+.skills-card-85 {
+    width: 85%;
+}
+
+.skills-card-60 {
+    width: 60%;
+}
+
+
+.skills-coding,
+.skills-professional {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 95%;
+}
+
+.skills-card_infor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
 .portfolio {
     display: flex;
     justify-content: center;
@@ -356,6 +553,9 @@ body {
     min-height: 100vh;
   
 }
+
+.skills-heading,
+.experience-heading,
 .contact-heading,
 .portfolio-heading, 
 .testimonial-heading {
@@ -367,6 +567,8 @@ body {
     
 }
 
+.skills-heading span,
+.experience-heading span,
 .contact-heading span,
 .testimonial-heading span,
 .portfolio-heading  span {

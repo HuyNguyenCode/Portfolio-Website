@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/form-validation.css">
+    <link rel="stylesheet" href="./assets/js/validator.js">
     <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/toast-message.css">
     <link rel="stylesheet" href="./assets/js/script.js">
     <title>Huy Nguyen Portfolio</title>
 </head>
@@ -51,6 +54,8 @@
         </nav>
     </header>
 
+    <div id="toast"></div>
+
     <section class="home tab-pane active">
         <div class="grid wide">
             <div class="row home-content home-wrapper">
@@ -83,7 +88,7 @@
                         <a href="./assets/img/download.png" download="nguyenquochuy_CEO">Download CV</a>
                     </button>
                     <button class="btn btn-hireMe">
-                        <a href="./assets/img/download.png">Hire me</a>
+                        <a href="#contact">Hire me</a>
                     </button>
                     
                 </div>
@@ -112,7 +117,7 @@
                     <p class="services-card_text">
                         With the aid of potent frameworks like Bootstrap, ReactJS, etc., we will assist you in creating the most cutting-edge and high-quality website templates or making prior provision website designs in HTML/CSS/JS.
                     </p>
-                    <button class="btn btn-readmore">Read more</button>
+                    <button onclick="showInformToast();" class="btn btn-readmore">Read more</button>
                 </div>
             </div>
             <div class="col l-4 m-6 c-12">
@@ -126,7 +131,7 @@
                     <p class="services-card_text">
                         You just supply us with your most basic requirements, and we can construct you a fully functional website from back-end to front-end. Also, we can assist you in enhancing your website's functioning.
                     </p>
-                    <button class="btn btn-readmore">Read more</button>
+                    <button onclick="showInformToast();" class="btn btn-readmore">Read more</button>
                 </div>
             </div>
             <div class="col l-4 m-12 c-12">
@@ -140,7 +145,7 @@
                     <p class="services-card_text">
                         We provide a variety of services for developing, upgrading, and repairing management software in Java or WPF, particularly with regard to the user interface. For more information, click the button below.
                     </p>
-                    <button class="btn btn-readmore">Read more</button>
+                    <button onclick="showInformToast();" class="btn btn-readmore">Read more</button>
                 </div>
             </div>
         </div>
@@ -162,7 +167,7 @@
                         <p class="portfolio-card_text">
                             Here are some samples of the work we've done for management software projects.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -180,7 +185,7 @@
                         <p class="portfolio-card_text">
                             Here are a few full-stack web projects we've completed.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -198,7 +203,7 @@
                         <p class="portfolio-card_text">
                             Several UX/UI projects we completed using HTML, CSS, and ReactJS.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -218,7 +223,7 @@
                         <p class="portfolio-card_text">
                             Here are some samples of the work we've done for management software projects.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -236,7 +241,7 @@
                         <p class="portfolio-card_text">
                             Here are a few full-stack web projects we've completed.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -254,7 +259,7 @@
                         <p class="portfolio-card_text">
                             Several UX/UI projects we completed using HTML, CSS, and ReactJS.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -275,7 +280,7 @@
                         <p class="portfolio-card_text">
                             Here are some samples of the work we've done for management software projects.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -293,7 +298,7 @@
                         <p class="portfolio-card_text">
                             Here are a few full-stack web projects we've completed.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -315,7 +320,7 @@
                         <p class="portfolio-card_text">
                             Several UX/UI projects we completed using HTML, CSS, and ReactJS.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -333,7 +338,7 @@
                         <p class="portfolio-card_text">
                             Here are some samples of the work we've done for management software projects.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -354,7 +359,7 @@
                         <p class="portfolio-card_text">
                             Here are a few full-stack web projects we've completed.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -372,7 +377,7 @@
                         <p class="portfolio-card_text">
                             Several UX/UI projects we completed using HTML, CSS, and ReactJS.
                         </p>
-                        <button class="btn-portfolio">
+                        <button onclick="showInformPortfolioToast();" class="btn-portfolio">
                             <div class="btn-icon-portfolio">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </div>
@@ -441,21 +446,25 @@
         <div class="contact-heading">
             Contact <span>Me!</span>
         </div>
-        <div class="contact-wrapper">
+        <form action="" method="POST" class="contact-wrapper" class="form" id="form-1">
             <div class="contact-box row">
-                <div class="contact-mobile col l-6 m-12 c-12">
-                    <input class="contact-input" type="text" placeholder="Full Name">
+                <div class="contact-mobile form-group col l-6 m-12 c-12">
+                    <input id="fullname" class="contact-input" type="text" placeholder="Full Name">
+                    <span class="form-message"></span>
                 </div>
-                <div class="contact-mobile col l-6 m-12 c-12">
-                    <input class="contact-input" type="text" placeholder="Email Address">
+                <div class="contact-mobile form-group col l-6 m-12 c-12">
+                    <input id="email" name="email" class="contact-input" type="text" placeholder="Email Address">
+                    <span class="form-message"></span>
                 </div>
             </div>
             <div class="contact-box row">
-                <div class="contact-mobile col l-6 m-12 c-12">
-                    <input class="contact-input" type="text" placeholder="Mobile Number">
+                <div class="contact-mobile form-group col l-6 m-12 c-12">
+                    <input id="phoneNumber" class="contact-input" type="text" placeholder="Mobile Number">
+                    <span class="form-message"></span>
                 </div>
-                <div class="contact-mobile col l-6 m-12 c-12">
-                    <input class="contact-input" type="text" placeholder="Email Subject">
+                <div class="contact-mobile form-group col l-6 m-12 c-12">
+                    <input id="emailSubject" class="contact-input" type="text" placeholder="Email Subject">
+                    <span class="form-message"></span>
                 </div>
             </div>
             <div class="contact-box row">
@@ -463,9 +472,8 @@
                     <textarea class="message-input" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
                 </div>
             </div>
-            <button class="btn btn-sendmessage">Send Message</button>
-            
-        </div>
+            <button class="btn btn-sendmessage form-send">Send Message</button>   
+        </form>
     </section>
 
     <footer class="footer">
@@ -482,9 +490,10 @@
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./assets/js/validator.js"></script>
 
     <script>
-      var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
         loop: true,
@@ -551,6 +560,90 @@
         ScrollReveal().reveal('h3, p', { origin: 'right' });
         ScrollReveal().reveal('h1,', { origin: 'left' });
 
+
+        Validator({
+        form: "#form-1",
+        errorSelector: '.form-message', 
+        formGroupSelector: '.form-group',
+    
+        rules: [
+            Validator.isRequired('#fullname', 'Please enter your full name'),
+            Validator.isRequired('#email', 'Please enter your email'),
+            Validator.isEmail('#email'),
+            Validator.isPhoneNumber('#phoneNumber'),
+        ],
+
+        onSubmit: (data) => {
+          //call API
+          console.log(data);
+        }
+      })
+
+      var showInformToast = () => {
+        toast({
+            title: "Inform!",
+            message: "Sorry for the inconvenience, but we're working on this feature!",
+            type: "info",
+            duration: 5000
+
+        })
+      }
+
+      var showInformPortfolioToast = () => {
+        toast({
+            title: "Inform!",
+            message: "We apologize for the inconvenience; please be patient as we finish up to complete the external links.",
+            type: "info",
+            duration: 7000
+
+        })
+      }
+
+      function toast({title = "", message = "", type = "", duration = 5000}) {
+        const main = document.getElementById("toast");
+        if (main) {
+            const toast = document.createElement("div");
+            // Auto remove toast
+            const autoRemoveId = setTimeout(function () {
+                main.removeChild(toast);
+            }, duration + 1000);
+
+            // Remove toast when clicked
+            toast.onclick = function (e) {
+                if (e.target.closest(".toast__close")) {
+                    main.removeChild(toast);
+                    clearTimeout(autoRemoveId);
+                }
+            };
+
+            const icons = {
+                success: "fas fa-check-circle",
+                info: "fas fa-info-circle",
+                warning: "fas fa-exclamation-circle",
+                error: "fas fa-exclamation-circle",
+            };
+
+            const icon = icons[type];
+            const delay = (duration / 1000).toFixed(2);
+
+            toast.classList.add("toast", `toast--${type}`);
+            toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+
+            toast.innerHTML = `
+                            <div class="toast__icon">
+                                <i class="${icon}"></i>
+                            </div>
+                            <div class="toast__body">
+                                <h3 class="toast__title">${title}</h3>
+                                <p class="toast__msg">${message}</p>
+                            </div>
+                            <div class="toast__close">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        `;
+            main.appendChild(toast);
+        }
+      }
     </script>
 
 

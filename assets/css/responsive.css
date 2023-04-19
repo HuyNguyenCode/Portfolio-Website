@@ -154,6 +154,15 @@
     .show-navbar.navbar-mobile-tablet {
         display: flex;
     }
+
+    .skills-box {
+        margin-bottom: 50px;
+    }
+
+    .skills-coding,
+    .skills-professional, .education-card, .experience-card {
+        width: 100%;
+    }
 }
 
 /* Tablet */
@@ -239,6 +248,7 @@
     .contact-tablet {
         margin-bottom: 30px;
     }
+    
     
 }
 

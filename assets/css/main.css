@@ -451,6 +451,9 @@ body {
     position: relative;
 }
 
+.skills-box {
+    width: 100%;
+}
 
 .skills-box_heading {
     margin-bottom: 30px;
